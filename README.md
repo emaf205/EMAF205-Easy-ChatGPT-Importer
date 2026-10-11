@@ -1,72 +1,51 @@
-# EMAF205 — Easy ChatGPT Importer
+# Easy ChatGPT Importer // Offline Archive Viewer & Markdown Exporter
 
-Web app statica, mobile-first e installabile per caricare, organizzare, copiare e condividere file con ChatGPT, Gemini, Claude e altre app.
+<p align="center">
+  <img src="assets/social-preview.jpg" alt="Easy ChatGPT Importer Hero Banner" width="100%">
+</p>
 
-![Anteprima desktop](assets/desktop-preview.png)
+> **Zero-cloud, client-side ChatGPT archive reader and JSON-to-Markdown exporter with instant full-text search.**
 
-## Funzioni
+---
 
-- Un tap sui file testuali per copiarne subito il contenuto.
-- Caricamento singolo e multiplo da desktop e smartphone.
-- Categorie personalizzabili, preferiti e ricerca.
-- Drag & drop per riordinare i file e spostarli tra categorie.
-- Invio rapido a ChatGPT, Gemini e Claude.
-- Condivisione nativa verso email, Drive e app compatibili.
-- Backup verificato del vault.
-- Backup completo con dati e sorgenti dell'app.
-- Snapshot automatici e ripristino sicuro.
-- Salvataggio locale tramite IndexedDB.
-- PWA installabile e utilizzabile offline.
-- Funzionamento sia in locale sia online tramite FTP o GitHub Pages.
+## Overview
 
-## Avvio locale
+**Easy ChatGPT Importer** is a private, client-side progressive web application (PWA) for managing official OpenAI data exports. When you download your personal data export (`conversations.json`), opening multi-gigabyte JSON files in traditional text editors causes crashes and lags.
 
-Scarica il repository e apri `index.html` con Chrome o Edge.
+This utility parses, indexes, and renders your entire ChatGPT conversation history locally in your browser with zero data leaving your machine.
 
-> Alcune funzioni avanzate, come installazione PWA, service worker e condivisione nativa, richiedono HTTPS o localhost.
+---
 
-## Pubblicazione FTP
+## Key Features
 
-Carica nella stessa cartella del server:
+- **100% Private & Local**: Zero server communication. All JSON parsing and search indexing happen inside client memory.
+- **Fast Full-Text Search**: Search through thousands of historical messages with instantaneous sub-second query matching.
+- **Clean Markdown & HTML Export**: Convert any conversation into clean, formatted Markdown files ready for Obsidian, Notion, or personal archives.
+- **Token & Message Analytics**: View conversation length, date filters, and turn-by-turn dialogue trees.
+- **PWA & Offline Capable**: Works completely offline with Service Worker caching.
 
-```text
-index.html
-app.js
-style.css
-manifest.webmanifest
-service-worker.js
-icons/
-```
+---
 
-Apri quindi l'indirizzo HTTPS della cartella.
+## Quick Start
 
-## GitHub Pages
+1. Clone or download:
+   ```bash
+   git clone https://github.com/emaf205/EMAF205-Easy-ChatGPT-Importer.git
+   ```
+2. Open `index.html` in your browser.
+3. Drag and drop your OpenAI `conversations.json` export file into the drop zone.
+4. Browse, search, and export your conversations immediately.
 
-Il repository include il workflow `.github/workflows/pages.yml`.
+---
 
-1. Apri **Settings → Pages**.
-2. In **Build and deployment**, seleziona **GitHub Actions**.
-3. Esegui il workflow oppure fai un nuovo push su `main`.
+## Live Demo
 
-## Privacy
+Try the live application at:  
+👉 **[emaf205.com/ideas/chatgpt-importer](https://emaf205.com/ideas/chatgpt-importer)**
 
-I file restano nel browser dell'utente. L'app non usa server, account o database remoti. Per evitare perdite di dati, crea regolarmente un backup ZIP.
+---
 
-## Struttura
+## License & Attribution
 
-```text
-├── index.html
-├── app.js
-├── style.css
-├── manifest.webmanifest
-├── service-worker.js
-├── VERSION.txt
-├── icons/
-├── assets/
-└── .github/workflows/pages.yml
-```
-
-## Crediti
-
-**A project by [EmaF205](https://linktr.ee/emaf205)**  
-**Made with ❤️ in Milan**
+Designed and built by **Emanuele BDC (EmaF205)**.  
+Released under the [MIT License](LICENSE).
